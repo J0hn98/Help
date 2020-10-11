@@ -12,4 +12,12 @@ Instructions for Git
 
 6. Create a new file with vim (file name. file type). Write the file, then press :wq to exit...
 
-7. 
+7. Type git add (file name.file type). This says that you want to ready the changes in this document to the github repo.
+
+8. Type git status. This tells the local repo that I want to prepare the changes I made in the original document ready for being uploaded to the github repo
+
+9. Type git commit -m "Explanation of changes from previous version"
+
+10. type git push origin master (file name. file type). This uploads the file to github!
+
+To re-edit files, just repeat steps 5 - 10
