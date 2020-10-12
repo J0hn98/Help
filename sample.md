@@ -21,3 +21,7 @@ Instructions for Git
 10. type git push origin master (file name. file type). This uploads the file to github!
 
 To re-edit files, just repeat steps 5 - 10
+
+I'm checking back in here to make sure I know what I am doing, got to practice this every day until I become proficient
+
+
