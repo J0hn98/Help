@@ -23,5 +23,3 @@ Instructions for Git
 To re-edit files, just repeat steps 5 - 10
 
 I'm checking back in here to make sure I know what I am doing, got to practice this every day until I become proficient
-
-
