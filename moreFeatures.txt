@@ -1,0 +1,138 @@
+The youTube video link is: https://www.youtube.com/watch?v=BF2OHMM86Ik
+
+Git has subsets, or layers to a project. We will work on the development branch, create a sub-branch
+ called the feature branch, work on it, then send it back to the development branch
+
+Create Repo in GitHub
+
+Make directory
+
+git init initializes repo
+
+git remote add origin
+
+touch file
+
+git add (file names), or use . to add all files
+
+git commit -m "description"
+
+git push origin master
+
+touch LISCENCE
+
+copy MIT liscense
+
+-------------------------------------
+
+Tagging a production release. I beleive tagging is kind of like a version history, it doesn't change, and future pushes don't change the tag either.
+
+git tag -a (version history, like vl.0) -m "Message" 	* If no file is specified, it will commit the most recent tag.
+
+git show 
+
+git push --tags origin master		* Pushes files to remote repository
+
+------------------------------------
+
+Creating a branch
+
+We will push all of our finished product to the master branch, and develop in a lower level branch (develop branch and some feature branches)
+
+	* This is kind of like nesting functions, master is top level, develop is lower level, and feature is lower level than that
+
+git branch develop	* Creates a new branch
+
+% There is a pointer that points to master branch, master branch points to most recent push. Just because we created a develop branch, we are still pointing to head
+
+% Develop branch also points to commit, but we need to move head pointer to develop
+
+git status 		* We need everything in the local repo to match the github repo before we can switch branches
+
+if working tree is clean:
+
+git checkout develop 		* We are now pointing at the develop branch
+
+% Use git branch to check which branch you are pointing to
+
+% Now we can work  on the project, change data, use git add (file name), git commit -m "description", just like normal
+
+git push origin develop		* Pushes to develop branch instead of master
+
+While working on files in the develop branch, the files will not be available in the master branch
+
+
+------------------------------------
+
+Creating a feature branch
+
+* Used to take a copy of a file, allows you to work on it independently of the github repo, then add it back in later. Kind of like a not real time google docs
+
+git branch feature1	* Makes our first feature branch
+
+git status * Again, make sure there are no changes between local and github repo, if clean
+
+git checkout feature1	* checkout allows us to change pointer to a different branch
+
+git add .		* Adds changes to be committed
+
+git commit -m "description"
+
+git push origin feature1
+
+% The .gitignore branch tells git which files we don't need to keep track of in the github repo. For example, a list of all the projects I need to get done I might make private.
+
+echo "file name" > .gitignore
+
+git status will show .gitignore, but not the files being ignored
+
+commit and push .getignore
+
+--------------------------------------
+
+Merging branches
+
+* In this example, we have a develop and feature1 branch. The feature1 branch contains most of the same files as the develop branch, but we may have added an additional file(s) into both
+branches... Assuming the files shared by both branches are the same (not edited in one branch only), we can merge branches.
+
+git checkout (branch)
+
+git merge (other branch)
+
+% This action will pop us into a message, we can add a description for the merge if we want
+
+-------------------------------------
+
+Deleting a branch
+
+* After we have merged a feature branch into a develop branch, we want to delete the feature branch
+
+git branch -d (name of branch to delete) * completely deletes feature branch
+
+------------------------------------
+
+Updating master branch
+
+* the instructions for merging came was for two files from the same parent branch. Since the master branch was not from the same parent branch, we need to move 
+the pointer to master back to the develop branch
+
+git status * Again make sure working tree is clean
+
+enter master branch:	git checkout master
+
+git merge develop
+
+tag most recent commit:	git tag -a v1.1 -m "Change notes"
+
+
+
+
+
+
+
+
+
+
+
+
+
